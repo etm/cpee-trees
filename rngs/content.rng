@@ -1,0 +1,19 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://riddl.org/ns/datatypes/1.0">
+  <include href="call.rng"/>
+  <include href="loop.rng"/>
+  <include href="stop.rng"/>
+  <include href="choose.rng"/>
+  <include href="parallel.rng"/>
+
+  <define name="cpee-content" combine="choice">
+    <zeroOrMore>
+      <choice>
+        <ref name="cpee-call"/>
+        <ref name="cpee-loop"/>
+        <ref name="cpee-stop"/>
+        <ref name="cpee-choose"/>
+        <ref name="cpee-parallel"/>
+      </choice>
+    </zeroOrMore>
+  </define>
+</grammar>

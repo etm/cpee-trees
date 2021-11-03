@@ -1,0 +1,156 @@
+<description xmlns="http://cpee.org/ns/description/2.0">
+  <call id="a1" endpoint="">
+    <parameters>
+      <label/>
+      <method>:post</method>
+      <arguments/>
+      <_context_data_analysis>
+        <probes/>
+        <ips/>
+      </_context_data_analysis>
+      <report>
+        <url/>
+      </report>
+    </parameters>
+    <code>
+      <prepare/>
+      <finalize output="result"/>
+      <update output="result"/>
+      <rescue output="result"/>
+    </code>
+    <annotations>
+      <_timing>
+        <_timing_weight/>
+        <_timing_avg/>
+        <explanations/>
+      </_timing>
+      <_notes>
+        <_notes_general/>
+      </_notes>
+    </annotations>
+    <input/>
+    <output/>
+    <implementation>
+      <description/>
+    </implementation>
+    <code>
+      <description/>
+    </code>
+  </call>
+  <call id="a2" endpoint="">
+    <parameters>
+      <label/>
+      <method>:post</method>
+      <arguments/>
+      <_context_data_analysis>
+        <probes/>
+        <ips/>
+      </_context_data_analysis>
+      <report>
+        <url/>
+      </report>
+    </parameters>
+    <annotations>
+      <_timing>
+        <_timing_weight/>
+        <_timing_avg/>
+        <explanations/>
+      </_timing>
+      <_notes>
+        <_notes_general/>
+      </_notes>
+    </annotations>
+    <input/>
+    <output/>
+    <implementation>
+      <description/>
+    </implementation>
+  </call>
+  <loop mode="pre_test" condition="">
+    <call id="a5" endpoint="">
+      <parameters>
+        <label/>
+        <method>:post</method>
+        <arguments/>
+        <_context_data_analysis>
+          <probes/>
+          <ips/>
+        </_context_data_analysis>
+        <report>
+          <url/>
+        </report>
+      </parameters>
+      <code>
+        <prepare/>
+        <finalize output="result"/>
+        <update output="result"/>
+        <rescue output="result"/>
+      </code>
+      <annotations>
+        <_timing>
+          <_timing_weight/>
+          <_timing_avg/>
+          <explanations/>
+        </_timing>
+        <_notes>
+          <_notes_general/>
+        </_notes>
+      </annotations>
+      <input/>
+      <output/>
+      <implementation>
+        <description/>
+      </implementation>
+      <code>
+        <description/>
+      </code>
+    </call>
+    <stop id="a3"/>
+    <_probability>
+      <_probability_min/>
+      <_probability_max/>
+      <_probability_avg/>
+    </_probability>
+  </loop>
+  <choose mode="exclusive">
+    <alternative condition=""/>
+    <otherwise/>
+  </choose>
+  <parallel wait="-1" cancel="last">
+    <call id="a4" endpoint="">
+      <parameters>
+        <label/>
+        <method>:post</method>
+        <arguments/>
+        <_context_data_analysis>
+          <probes/>
+          <ips/>
+        </_context_data_analysis>
+        <report>
+          <url/>
+        </report>
+      </parameters>
+      <annotations>
+        <_timing>
+          <_timing_weight/>
+          <_timing_avg/>
+          <explanations/>
+        </_timing>
+        <_notes>
+          <_notes_general/>
+        </_notes>
+      </annotations>
+      <input/>
+      <output/>
+      <implementation>
+        <description/>
+      </implementation>
+    </call>
+    <parallel_branch pass="" local=""/>
+    <parallel_branch pass="" local=""/>
+  </parallel>
+  <parallel wait="2" cancel="first">
+    <parallel_branch pass="" local=""/>
+    <parallel_branch pass="" local=""/>
+  </parallel>
+</description>

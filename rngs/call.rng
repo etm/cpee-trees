@@ -1,0 +1,116 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://riddl.org/ns/datatypes/1.0">
+  <include href="arbitrary.rng"/>
+
+  <define name="cpee-call">
+
+    <element name="call" ns="http://cpee.org/ns/description/1.0">
+      <attribute name="id"> <!--{{{-->
+        <data type="string">
+          <param name="pattern">[a-z][0-9]+</param>
+        </data>
+      </attribute> <!--}}}-->
+      <attribute name="endpoint"> <!--{{{-->
+        <data type="string"/>
+      </attribute> <!--}}}-->
+      <interleave>
+        <element name="parameters"> <!--{{{-->
+          <element name="label">
+            <data type="string"/>
+          </element>
+          <optional>
+            <element name="method">
+              <data type="string">
+                <param name="pattern">:[a-z]+</param>
+              </data>
+            </element>
+          </optional>
+          <element name="arguments">
+            <zeroOrMore>
+              <element>
+                <anyName/>
+                <data type="string"/>
+              </element>
+            </zeroOrMore>
+          </element>
+
+          <ref name="arbitrary"/>
+        </element> <!--}}}-->
+
+        <optional>
+          <element name="code"> <!--{{{-->
+            <element name="prepare">
+              <text/>
+            </element>
+            <element name="finalize">
+              <attribute name="output">
+                <data type="string"/>
+              </attribute>
+              <text/>
+            </element>
+            <element name="update">
+              <attribute name="output">
+                <data type="string"/>
+              </attribute>
+              <text/>
+            </element>
+            <element name="rescue">
+              <attribute name="output">
+                <data type="string"/>
+              </attribute>
+              <text/>
+            </element>
+          </element> <!--}}}-->
+        </optional>
+
+        <element name="annotations"> <!--{{{-->
+          <ref name="arbitrary"/>
+          <element name="_notes">
+            <element name="_notes_general">
+              <text/>
+            </element>
+          </element>
+          <ref name="arbitrary"/>
+        </element> <!--}}}-->
+
+          <optional>
+            <element name="documentation"> <!--{{{-->
+              <element name="input">
+                <zeroOrMore>
+                  <element name="item">
+                    <attribute name="label">
+                      <data type="string"/>
+                    </attribute>
+                    <text/>
+                  </element>
+                </zeroOrMore>
+              </element>
+              <element name="output">
+                <zeroOrMore>
+                  <element name="item">
+                    <attribute name="label">
+                      <data type="string"/>
+                    </attribute>
+                    <text/>
+                  </element>
+                </zeroOrMore>
+              </element>
+              <element name="implementation">
+                <element name="description">
+                  <text/>
+                </element>
+              </element>
+              <optional>
+                <element name="code">
+                  <element name="description">
+                    <text/>
+                  </element>
+                </element>
+              </optional>
+            </element> <!--}}}-->
+          </optional>
+
+        </interleave>
+      </element>
+
+  </define>
+</grammar>

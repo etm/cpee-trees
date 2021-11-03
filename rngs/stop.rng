@@ -1,0 +1,14 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://riddl.org/ns/datatypes/1.0">
+
+  <define name="cpee-stop" combine="choice">
+
+    <element name="stop" ns="http://cpee.org/ns/description/1.0">
+      <attribute name="id"> <!--{{{-->
+        <data type="string">
+          <param name="pattern">[a-z][0-9]+</param>
+        </data>
+      </attribute> <!--}}}-->
+    </element>
+
+  </define>
+</grammar>

@@ -1,0 +1,26 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://riddl.org/ns/datatypes/1.0">
+  <define name="cpee-probability" combine="choice">
+    <optional>
+      <element name="_probability" ns="http://cpee.org/ns/description/1.0">
+        <choice>
+          <element name="_probability_min"><empty/></element>
+          <element name="_probability_min">
+            <data type="nonNegativeInteger"/>
+          </element>
+        </choice>
+        <choice>
+          <element name="_probability_max"><empty/></element>
+          <element name="_probability_max">
+            <data type="nonNegativeInteger"/>
+          </element>
+        </choice>
+        <choice>
+          <element name="_probability_avg"><empty/></element>
+          <element name="_probability_avg">
+            <data type="nonNegativeInteger"/>
+          </element>
+        </choice>
+      </element>
+    </optional>
+  </define>
+</grammar>

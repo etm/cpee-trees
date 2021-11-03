@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://riddl.org/ns/description/1.0">
+  <include href="rngs/content.rng"/>
+
+  <start>
+    <element name="description" ns="http://cpee.org/ns/description/1.0">
+      <ref name="cpee-content"/>
+   	</element>
+  </start>
+</grammar>
