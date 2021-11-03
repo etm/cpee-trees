@@ -1,13 +1,9 @@
-<description xmlns="http://cpee.org/ns/description/2.0">
+<description xmlns="http://cpee.org/ns/description/1.0">
   <call id="a1" endpoint="">
     <parameters>
       <label/>
       <method>:post</method>
       <arguments/>
-      <_context_data_analysis>
-        <probes/>
-        <ips/>
-      </_context_data_analysis>
       <report>
         <url/>
       </report>
@@ -27,25 +23,27 @@
       <_notes>
         <_notes_general/>
       </_notes>
+      <_context_data_analysis>
+        <probes/>
+        <ips/>
+      </_context_data_analysis>
     </annotations>
-    <input/>
-    <output/>
-    <implementation>
-      <description/>
-    </implementation>
-    <code>
-      <description/>
-    </code>
+    <documentation>
+      <input/>
+      <output/>
+      <implementation>
+        <description/>
+      </implementation>
+      <code>
+        <description/>
+      </code>
+    </documentation>
   </call>
   <call id="a2" endpoint="">
     <parameters>
       <label/>
       <method>:post</method>
       <arguments/>
-      <_context_data_analysis>
-        <probes/>
-        <ips/>
-      </_context_data_analysis>
       <report>
         <url/>
       </report>
@@ -59,12 +57,18 @@
       <_notes>
         <_notes_general/>
       </_notes>
+      <_context_data_analysis>
+        <probes/>
+        <ips/>
+      </_context_data_analysis>
     </annotations>
-    <input/>
-    <output/>
-    <implementation>
-      <description/>
-    </implementation>
+    <documentation>
+      <input/>
+      <output/>
+      <implementation>
+        <description/>
+      </implementation>
+    </documentation>
   </call>
   <loop mode="pre_test" condition="">
     <call id="a5" endpoint="">
@@ -72,10 +76,6 @@
         <label/>
         <method>:post</method>
         <arguments/>
-        <_context_data_analysis>
-          <probes/>
-          <ips/>
-        </_context_data_analysis>
         <report>
           <url/>
         </report>
@@ -95,15 +95,21 @@
         <_notes>
           <_notes_general/>
         </_notes>
+        <_context_data_analysis>
+          <probes/>
+          <ips/>
+        </_context_data_analysis>
       </annotations>
-      <input/>
-      <output/>
-      <implementation>
-        <description/>
-      </implementation>
-      <code>
-        <description/>
-      </code>
+      <documentation>
+        <input/>
+        <output/>
+        <implementation>
+          <description/>
+        </implementation>
+        <code>
+          <description/>
+        </code>
+      </documentation>
     </call>
     <stop id="a3"/>
     <_probability>
@@ -122,10 +128,6 @@
         <label/>
         <method>:post</method>
         <arguments/>
-        <_context_data_analysis>
-          <probes/>
-          <ips/>
-        </_context_data_analysis>
         <report>
           <url/>
         </report>
@@ -139,18 +141,24 @@
         <_notes>
           <_notes_general/>
         </_notes>
+        <_context_data_analysis>
+          <probes/>
+          <ips/>
+        </_context_data_analysis>
       </annotations>
-      <input/>
-      <output/>
-      <implementation>
-        <description/>
-      </implementation>
+      <documentation>
+        <input/>
+        <output/>
+        <implementation>
+          <description/>
+        </implementation>
+      </documentation>
     </call>
-    <parallel_branch pass="" local=""/>
-    <parallel_branch pass="" local=""/>
+    <parallel_branch/>
+    <parallel_branch/>
   </parallel>
   <parallel wait="2" cancel="first">
-    <parallel_branch pass="" local=""/>
-    <parallel_branch pass="" local=""/>
+    <parallel_branch/>
+    <parallel_branch/>
   </parallel>
 </description>
