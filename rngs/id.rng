@@ -1,0 +1,9 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://riddl.org/ns/datatypes/1.0">
+  <define name="cpee-id" combine="choice">
+    <attribute name="id">
+      <data type="string">
+        <param name="pattern">[a-z][0-9]+</param>
+      </data>
+    </attribute>
+  </define>
+</grammar>
