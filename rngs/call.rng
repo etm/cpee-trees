@@ -30,7 +30,7 @@
             </zeroOrMore>
           </element>
 
-          <ref name="arbitrary"/>
+          <zeroOrMore><ref name="any"/></zeroOrMore>
         </element> <!--}}}-->
 
         <optional>
@@ -60,13 +60,13 @@
         </optional>
 
         <element name="annotations"> <!--{{{-->
-          <ref name="arbitrary"/>
+          <zeroOrMore><ref name="any"/></zeroOrMore>
           <element name="_notes">
             <element name="_notes_general">
               <text/>
             </element>
           </element>
-          <ref name="arbitrary"/>
+          <zeroOrMore><ref name="any"/></zeroOrMore>
         </element> <!--}}}-->
 
           <optional>
