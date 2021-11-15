@@ -1,0 +1,48 @@
+<testset xmlns="http://cpee.org/ns/properties/2.0">
+  <executionhandler>ruby</executionhandler>
+  <dataelements/>
+  <endpoints>
+    <bookAir>http://gruppe.wst.univie.ac.at/~mangler/services/airline.php</bookAir>
+    <timeout>http://gruppe.wst.univie.ac.at/~mangler/services/timeout.php</timeout>
+    <bookHotel>http://gruppe.wst.univie.ac.at/~mangler/services/hotel.php</bookHotel>
+    <approve>http://gruppe.wst.univie.ac.at/~mangler/services/approval.php</approve>
+  </endpoints>
+  <attributes>
+    <theme>preset</theme>
+    <info>Coopis 2010</info>
+    <creator>Christine Ashcreek</creator>
+    <modeltype>CPEE</modeltype>
+    <author>Christine Ashcreek</author>
+    <design_stage>development</design_stage>
+    <design_dir>Templates.dir</design_dir>
+  </attributes>
+  <description>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <loop mode="pre_test" condition="true">
+        <manipulate id="a1" label="data.counter -= 1">data.counter -= 1</manipulate>
+        <_probability>
+          <_probability_min/>
+          <_probability_max/>
+          <_probability_avg/>
+        </_probability>
+        <choose mode="exclusive">
+          <alternative condition="data.counter &gt; 0">
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg/>
+            </_probability>
+          </alternative>
+          <otherwise>
+            <escape/>
+          </otherwise>
+        </choose>
+      </loop>
+    </description>
+  </description>
+  <transformation>
+    <description type="copy"/>
+    <dataelements type="none"/>
+    <endpoints type="none"/>
+  </transformation>
+</testset>
