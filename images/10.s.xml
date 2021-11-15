@@ -1,71 +1,10 @@
-<testset xmlns="http://cpee.org/ns/properties/2.0">
-  <executionhandler>ruby</executionhandler>
-  <dataelements/>
-  <endpoints>
-    <bookAir>http://gruppe.wst.univie.ac.at/~mangler/services/airline.php</bookAir>
-    <timeout>http://gruppe.wst.univie.ac.at/~mangler/services/timeout.php</timeout>
-    <bookHotel>http://gruppe.wst.univie.ac.at/~mangler/services/hotel.php</bookHotel>
-    <approve>http://gruppe.wst.univie.ac.at/~mangler/services/approval.php</approve>
-  </endpoints>
-  <attributes>
-    <theme>preset</theme>
-    <info>Coopis 2010</info>
-    <creator>Christine Ashcreek</creator>
-    <modeltype>CPEE</modeltype>
-    <author>Christine Ashcreek</author>
-    <design_stage>development</design_stage>
-    <design_dir>Templates.dir</design_dir>
-  </attributes>
-  <description>
-    <description xmlns="http://cpee.org/ns/description/1.0">
-      <parallel wait="-1" cancel="last">
-        <loop mode="pre_test" condition="data .counter &lt; 1">
-          <manipulate id="a2" label="data.counter -= 1">data.counter -= 1</manipulate>
-          <_probability>
-            <_probability_min/>
-            <_probability_max/>
-            <_probability_avg/>
-          </_probability>
-          <parallel_branch pass="" local="">
-            <call id="a1" endpoint="">
-              <parameters>
-                <label>Task 1</label>
-                <method>:post</method>
-                <arguments/>
-              </parameters>
-              <annotations>
-                <_timing>
-                  <_timing_weight/>
-                  <_timing_avg/>
-                  <_context_data_analysis>
-                    <probes/>
-                    <ips/>
-                  </_context_data_analysis>
-                  <report>
-                    <url/>
-                  </report>
-                  <explanations/>
-                </_timing>
-                <_notes>
-                  <_notes_general/>
-                </_notes>
-              </annotations>
-              <documentation>
-                <input/>
-                <output/>
-                <implementation>
-                  <description/>
-                </implementation>
-              </documentation>
-            </call>
-          </parallel_branch>
-        </loop>
-      </parallel>
-    </description>
-  </description>
-  <transformation>
-    <description type="copy"/>
-    <dataelements type="none"/>
-    <endpoints type="none"/>
-  </transformation>
-</testset>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <parallel wait="-1" cancel="last">
+    <loop mode="pre_test" condition="data .counter &lt; 1">
+      <manipulate id="a2" label="data.counter -= 1">data.counter -= 1</manipulate>
+      <parallel_branch>
+        <call id="a1" endpoint=""/>
+      </parallel_branch>
+    </loop>
+  </parallel>
+</description>
